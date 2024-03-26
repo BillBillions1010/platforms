@@ -2,35 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Vars */
+:root {
+
+  --dark: #303e3f;
+  --med: #7e7e7e;
+  --light: #e3ddd3;
+  --light2: #e9ecef;
+
+  --p: #3374e3;
+  --s: #7eee3e;
+  --a: #e37333;
+  
+  --pt: rgba(51, 115, 227, 0.6); 
+  --st: rgba(126, 238, 62, 0.6);
+  --at: rgba(227, 115, 51, 0.6);
+  
+  --shat: 2px 3px 2px var(--dark);
+  --shab: inset 0 0 10px var(--light), 6px 4px 2px var(--dark);
+  --bdr: 2px solid var(--s);
+  --glow: 0 0 10px var(--s);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* If Dark Theme */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000000;
+    background-color: #131a1f;
   }
 }
 
 @layer utilities {
   .overflow-hidden {
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-mask-image: -webkit-radial-gradient(var(--pt), var(--st));
   }
 }
+
 
 .ProseMirror .is-editor-empty:first-child::before {
   content: attr(data-placeholder);
   float: left;
-  color: #adb5bd;
+  color: var(--med);
   pointer-events: none;
   height: 0;
 }
 .ProseMirror .is-empty::before {
   content: attr(data-placeholder);
   float: left;
-  color: #adb5bd;
+  color: var(--mid);
   pointer-events: none;
   height: 0;
 }
 
 /* Custom image styles */
-
 .ProseMirror img {
   transition: filter 0.1s ease-in-out;
 
@@ -40,13 +71,12 @@
   }
 
   &.ProseMirror-selectednode {
-    outline: 3px solid #5abbf7;
+    outline: 3px solid var(--p);
     filter: brightness(90%);
   }
 }
 
 /* Custom TODO list checkboxes – shoutout to this awesome tutorial: https://moderncss.dev/pure-css-custom-checkbox-style/ */
-
 ul[data-type="taskList"] li > label {
   margin-right: 0.2rem;
   user-select: none;
@@ -61,24 +91,24 @@ ul[data-type="taskList"] li > label {
 ul[data-type="taskList"] li > label input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: var(--light);
   margin: 0;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
   position: relative;
   top: 5px;
-  border: 2px solid black;
+  border: 2px solid var(--dark);
   margin-right: 0.3rem;
   display: grid;
   place-content: center;
 
   &:hover {
-    background-color: #f8f9fa;
+    background-color: var(--light);
   }
 
   &:active {
-    background-color: #e9ecef;
+    background-color: var(--light2);
   }
 
   &::before {

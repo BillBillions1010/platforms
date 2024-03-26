@@ -1,5 +1,7 @@
 import { InlineSnippet } from "@/components/form/domain-configuration";
 import Image from "next/image";
+import CTA from '@/components/CTA';
+import SiteCard from '@/components/site-card';
 
 export default function HomePage() {
   return (
@@ -8,14 +10,15 @@ export default function HomePage() {
         width={512}
         height={512}
         src="/logo.png"
-        alt="Platforms on Vercel"
+        alt="Billions Platforms"
         className="w-48"
       />
       <h1 className="text-white">
-        Edit this page on{" "}
+        Welcome to Billion&apos;s Platform 
         <InlineSnippet className="ml-2 bg-blue-900 text-blue-100">
-          app/home/page.tsx
+          Click an option below to get started. 
         </InlineSnippet>
+        <SiteCard />
       </h1>
     </div>
   );
