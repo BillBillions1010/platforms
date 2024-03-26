@@ -18,6 +18,7 @@ export default function HomePage() {
         <InlineSnippet className="ml-2 bg-blue-900 text-blue-100">
           Click an option below to get started. 
         </InlineSnippet>
+        <CTA />
         <SiteCard />
       </h1>
     </div>
