@@ -4,7 +4,6 @@
 
 /* Vars */
 :root {
-
   --dark: #303e3f;
   --med: #7e7e7e;
   --light: #e3ddd3;
@@ -13,11 +12,11 @@
   --p: #3374e3;
   --s: #7eee3e;
   --a: #e37333;
-  
-  --pt: rgba(51, 115, 227, 0.6); 
+
+  --pt: rgba(51, 115, 227, 0.6);
   --st: rgba(126, 238, 62, 0.6);
   --at: rgba(227, 115, 51, 0.6);
-  
+
   --shat: 2px 3px 2px var(--dark);
   --shab: inset 0 0 10px var(--light), 6px 4px 2px var(--dark);
   --bdr: 2px solid var(--s);
@@ -44,7 +43,6 @@
     -webkit-mask-image: -webkit-radial-gradient(var(--pt), var(--st));
   }
 }
-
 
 .ProseMirror .is-editor-empty:first-child::before {
   content: attr(data-placeholder);
