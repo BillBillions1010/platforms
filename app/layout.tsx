@@ -14,7 +14,7 @@ const image = "https://vercel.pub/thumbnail.png";
 export const metadata: Metadata = {
   title,
   description,
-  icons: ["https://vercel.pub/favicon.ico"],
+  icons: ["http://billbillions1010.github.io/public/favicon.ico"],
   openGraph: {
     title,
     description,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title,
     description,
     images: [image],
-    creator: "@vercel",
+    creator: "@billbillions1010",
   },
   metadataBase: new URL("https://vercel.pub"),
 };
